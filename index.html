@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tempur Paws</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <!-- Hamburger icon using Bootstrap icons -->
+      <div class="social-icons">
+        <a href="#" class="heart"
+          ><img src="assets/images/heart.png" alt="Social Icon"
+        /></a>
+        <a href="#"
+          ><img src="assets/images/Frame 238.png" alt="Social Icon"
+        /></a>
+        <a href="#"
+          ><img src="assets/images/Frame 237.png" alt="Social Icon"
+        /></a>
+        <button type="button">Buy Now</button>
+      </div>
+
+      <div class="nav-menu" id="navMenu">
+        <!-- The below section is Only for small section and Hidden in desktop view -->
+        <!-- Currrency Dropdown Button for small screen display:none -->
+        <div class="dropdown-smallScreen2">
+          <!-- Dropdown button with default selected country -->
+          <button class="dropdown-button" id="selectedCountryButtons">
+            <img
+              src="assets/images/image 38.png"
+              alt="US Flag"
+              id="selectedFlags"
+            />
+            <span id="selectedCountrys">USD</span>
+            <i class="bi bi-caret-down-fill"></i>
+          </button>
+          <!-- Dropdown menu content -->
+          <div class="dropdown-content dropdown-content_first">
+            <div
+              class="dropdown-item"
+              onclick="selectCountrys('USD', 'assets/images/image 38.png')"
+            >
+              <img
+                src="assets/images/image 38.png"
+                alt="US Flag"
+                class="flag-icon"
+              />
+              <span>USD</span>
+            </div>
+            <div
+              class="dropdown-item"
+              onclick="selectCountrys('CAD', 'assets/images/ca.png')"
+            >
+              <img
+                src="assets/images/ca.png"
+                alt="Canada Flag"
+                class="flag-icon"
+              />
+              <span>CAD</span>
+            </div>
+            <div
+              class="dropdown-item"
+              onclick="selectCountrys('GBP', 'assets/images/uk.png')"
+            >
+              <img src="assets/images/uk.png" alt="UK Flag" class="flag-icon" />
+              <span>GBP</span>
+            </div>
+            <div
+              class="dropdown-item"
+              onclick="selectCountrys('FRF', 'assets/images/fr.png')"
+            >
+              <img
+                src="assets/images/fr.png"
+                alt="France Flag"
+                class="flag-icon"
+              />
+              <span>FRF</span>
+            </div>
+          </div>
+        </div>
+        <div class="logo">
+          <a href="#"
+            ><img src="assets/images/531cc_2.png.png" alt="My Logo"
+          /></a>
+        </div>
+
+        <!-- Hamburger Icon Code display:none -->
+        <div class="menu-icon">
+          <button class="menu-toggle" id="menuToggle">
+            <i class="bi bi-list" id="hamburgerIcon"></i>
+            <i class="bi bi-x" id="closeIcon" style="display: none"></i>
+          </button>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dog Bed</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <div class="dropdown">
+              <!-- Dropdown button with default selected country -->
+              <button
+                class="dropdown-button dropdown-button1"
+                id="selectedCountryButton"
+              >
+                <img
+                  src="assets/images/image 38.png"
+                  alt="US Flag"
+                  id="selectedFlag"
+                />
+                <span id="selectedCountry">USD</span>
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <!-- Dropdown menu content -->
+              <div class="dropdown-content">
+                <div
+                  class="dropdown-item"
+                  onclick="selectCountry('USD', 'assets/images/image 38.png')"
+                >
+                  <img
+                    src="assets/images/image 38.png"
+                    alt="US Flag"
+                    class="flag-icon"
+                  />
+                  <span>USD</span>
+                </div>
+                <div
+                  class="dropdown-item"
+                  onclick="selectCountry('CAD', 'assets/images/ca.png')"
+                >
+                  <img
+                    src="assets/images/ca.png"
+                    alt="Canada Flag"
+                    class="flag-icon"
+                  />
+                  <span>CAD</span>
+                </div>
+                <div
+                  class="dropdown-item"
+                  onclick="selectCountry('GBP', 'assets/images/uk.png')"
+                >
+                  <img
+                    src="assets/images/uk.png"
+                    alt="UK Flag"
+                    class="flag-icon"
+                  />
+                  <span>GBP</span>
+                </div>
+                <div
+                  class="dropdown-item"
+                  onclick="selectCountry('FRF', 'assets/images/fr.png')"
+                >
+                  <img
+                    src="assets/images/fr.png"
+                    alt="France Flag"
+                    class="flag-icon"
+                  />
+                  <span>FRF</span>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header-section -->
+    <!-- section-1 -->
+    <div class="section1">
+      <div class="innerSection1">
+        <!-- left -->
+        <div class="section1-left">
+          <div class="content">
+            <div class="image">
+              <img src="assets/images/Clip path group.png" alt="" />
+            </div>
+            <h2>Revolutionar Pain Relief & Comfort for Senior Dog</h2>
+            <p>
+              Give your dog the comfort they deserve with the first-ever
+              temperature-controlled therapeutic bed designed for dogs suffering
+              from arthritis and joint issues
+            </p>
+            <button type="button">Make Comfortable Now</button>
+          </div>
+        </div>
+        <!-- right -->
+        <div class="section1-right">
+          <div class="image1">
+            <img src="assets/images/Highlight 28.png" alt="" />
+          </div>
+          <div class="image2">
+            <div class="image3">
+              <img src="assets/images/Frame 351.png" alt="" />
+            </div>
+            <img src="assets/images/Artboard 1.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="vectorImage">
+        <div class="vector1">
+          <img src="assets/images/vector1.png" alt="" />
+          <div class="vector2">
+            <a href="#"><img src="assets/images/Vector2.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section-2 -->
+    <div class="section2">
+      <div class="heading">
+        <img src="assets/images/Group 1000003298.png" alt="" />
+        <h2>Vet-Backed Technology for Joint Relief</h2>
+        <div class="image287">
+          <img src="assets/images/Group 1000003287.png" alt="" />
+        </div>
+      </div>
+      <!-- row1 -->
+      <div class="row1">
+        <div class="row1-left">
+          <img src="assets/images/Frame 337.png" alt="" />
+        </div>
+        <div class="row1-right">
+          <div class="first-col">
+            <h4>Cornell Vet College</h4>
+            <img src="assets/images/Vector.png" alt="" />
+          </div>
+          <div class="second-col">
+            <h4>
+              Integrating heat and cold therapy directly into a pet's bed offers
+              a seamless, daily approach to pain management without additional
+              effort or discomfort for the pet owner
+            </h4>
+            <p>
+              Studies have shown that applying heat helps by promoting
+              circulation, which brings essential nutrients and oxygen to
+              affected joints, enhancing flexibility and comfort in older pets
+            </p>
+          </div>
+          <div class="third-col">
+            <div class="stars">
+              <img src="assets/images/stars.png" alt="" />
+            </div>
+            <div class="picture">
+              <img src="assets/images/Ellipse 15.png" alt="" />
+              <h6>Mr. John Doe</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- row2 -->
+      <div class="row1 row2">
+        <div class="row1-right row2-left">
+          <div class="first-col">
+            <h4>Pain Management Education at UCSF</h4>
+            <img src="assets/images/Vector.png" alt="" />
+          </div>
+          <div class="second-col">
+            <h4>
+              Cold therapy is a powerful tool for managing joint inflammation.”
+              According to veterinary studies
+            </h4>
+            <p>
+              cold therapy reduces pain and inflammation in joints by
+              constricting blood vessels and decreasing inflammatory responses
+              in affected areas. This effect provides immediate relief for
+              conditions like arthritis
+            </p>
+          </div>
+          <div class="third-col">
+            <div class="stars">
+              <img src="assets/images/stars.png" alt="" />
+            </div>
+            <div class="picture">
+              <img src="assets/images/Ellipse 15.png" alt="" />
+              <h6>Mr. John Doe</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row1-right row2-right">
+          <div class="first-col">
+            <h4>Pain Management Education at UCSF</h4>
+            <img src="assets/images/Vector.png" alt="" />
+          </div>
+          <div class="second-col">
+            <h4>
+              Integrating heat and cold therapy directly into a pet's bed offers
+              a seamless, daily approach to pain management without additional
+              effort or discomfort for the pet owner
+            </h4>
+            <p>
+              Experts recommend continuous, accessible pain management like
+              this, which allows pets to self-regulate and benefit from
+              therapeutic comfort as needed
+            </p>
+          </div>
+          <div class="third-col">
+            <div class="stars">
+              <img src="assets/images/stars.png" alt="" />
+            </div>
+            <div class="picture">
+              <img src="assets/images/Ellipse 15.png" alt="" />
+              <h6>Mr. John Doe</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section-3 -->
+    <div class="section3">
+      <div class="heading">
+        <img src="assets/images/Group 1000003298.png" alt="" />
+        <h2>
+          Daily, Natural Relief Without Harmful Drugs, Needles, or Expensive
+          Surgeries.
+        </h2>
+        <div class="image287 image288">
+          <img src="assets/images/Group 1000003287.png" alt="" />
+        </div>
+      </div>
+      <div class="tempur-availability">
+        <div class="tempur-availability-left">
+          <div class="top-image">
+            <img src="assets/images/image 54.png" alt="" />
+          </div>
+          <div class="innerdata">
+            <div class="heading">
+              <h3>TemPur-Paws</h3>
+            </div>
+            <div class="points">
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-star.png" alt="" />
+                </div>
+                <div class="para">
+                  <p>Medication-free</p>
+                </div>
+              </div>
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-star.png" alt="" />
+                </div>
+                <div class="para">
+                  <p>Zero side effects</p>
+                </div>
+              </div>
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-star.png" alt="" />
+                </div>
+                <div class="para">
+                  <p>One time investment, 10+ years of use</p>
+                </div>
+              </div>
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-star.png" alt="" />
+                </div>
+                <div class="para">
+                  <p>24/7 on-demand therapy at home</p>
+                </div>
+              </div>
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-star.png" alt="" />
+                </div>
+                <div class="para">
+                  <p>Improves cellular health of every joint & muscle</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tempur-availability-right">
+          <div class="row1">
+            <div class="row1-upper">
+              <div class="image">
+                <div class="image1">
+                  <img src="assets/images/medication1.png" alt="" />
+                </div>
+                <div class="para">
+                  <p>Harmful drugs</p>
+                </div>
+              </div>
+              <div class="image">
+                <div class="image1">
+                  <img src="assets/images/medication2.png" alt="" />
+                </div>
+                <div class="para">
+                  <p>Invasive needles</p>
+                </div>
+              </div>
+              <div class="image">
+                <div class="image1">
+                  <img src="assets/images/medication3.png" alt="" />
+                </div>
+                <div class="para">
+                  <p>Expensive surgeries</p>
+                </div>
+              </div>
+            </div>
+            <div class="row1-lower">
+              <h3>Traditional “Solutions”</h3>
+              <h5>Ineffective Compromises</h5>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="points">
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-cross.png" alt="" />
+                </div>
+                <div class="para1">
+                  <p>Drug side effects</p>
+                </div>
+              </div>
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-cross.png" alt="" />
+                </div>
+                <div class="para1">
+                  <p>Repeating expensive costs</p>
+                </div>
+              </div>
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-cross.png" alt="" />
+                </div>
+                <div class="para1">
+                  <p>Harm & discomfort during transit to therapist</p>
+                </div>
+              </div>
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-cross.png" alt="" />
+                </div>
+                <div class="para1">
+                  <p>Pain returns without on-demand relief</p>
+                </div>
+              </div>
+              <div class="points-rows">
+                <div class="image">
+                  <img src="assets/images/ul-cross.png" alt="" />
+                </div>
+                <div class="para1">
+                  <p>Masks pain but doesn't improve overall health</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row3">
+            <div class="image1">
+              <div class="internal-image">
+                <img src="assets/images/531cc_2Copy.png" alt="" />
+              </div>
+              <div class="row3-image">
+                <img src="assets/images/image 43.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section-4 -->
+    <div class="section4">
+      <div class="heading">
+        <img src="assets/images/Group 1000003298.png" alt="" />
+        <h2>Built to Improve Your Dog's Health and Happiness</h2>
+        <div class="image287 image288">
+          <img src="assets/images/Group 1000003287.png" alt="" />
+        </div>
+      </div>
+      <div class="dog-health">
+        <div class="dog-health-left">
+          <div class="innerdata">
+            <div class="image">
+              <img src="assets/images/blood circulate 1.png" alt="" />
+            </div>
+            <div class="heading">
+              <h3>Advanced pain relief</h3>
+            </div>
+            <div class="paragraph">
+              <p>
+                TempurPaws' gentle warming feature promotes blood flow, relaxes
+                stiff muscles, and helps reduce joint discomfort, offerin...
+              </p>
+            </div>
+            <div class="btn"><button type="button">View Details</button></div>
+          </div>
+        </div>
+        <div class="dog-health-right">
+          <div class="innerdata">
+            <div class="image">
+              <img src="assets/images/inflamation 1.png" alt="" />
+            </div>
+            <div class="heading">
+              <h3>Prevents Joint Stiffness Swelling</h3>
+            </div>
+            <div class="paragraph">
+              <p>
+                TempurPaws' gentle warming feature promotes blood flow, relaxes
+                stiff muscles, and helps reduce joint discomfort, offerin...
+              </p>
+            </div>
+            <div class="btn"><button type="button">View Details</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="sections">
+        <div class="firstSec">
+          <img src="assets/images/preimum 1.png" alt="" />
+          <h3>Premium Memory Foam Comfort</h3>
+          <p>
+            TempurPaws' gentle warming feature promotes blood flow, relaaxes
+            sttiff muscles , and helps reduce joint discomfort,...
+          </p>
+          <div class="btnn">
+            <button type="button">Make Comfortable Now</button>
+          </div>
+        </div>
+        <div class="secondSec">
+          <img src="assets/images/Frame 358.png" alt="" />
+          <h3>Easy Maintenance</h3>
+          <p>
+            Designed for easy care, featuring machine-washable covers and a
+            waterproof liner that protects against spills an...
+          </p>
+          <div class="btnn">
+            <button type="button">Make Comfortable Now</button>
+          </div>
+        </div>
+        <div class="thirdSec">
+          <img src="assets/images/Frame 359.png" alt="" />
+          <h3>Pet-Safe & Sustainable</h3>
+          <p>
+            Crafted with eco-friendly materials and pet-safe memory foam, our
+            bed ensres a safe, sustinable, a...
+          </p>
+          <div class="btnn">
+            <button type="button">Make Comfortable Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Section-5 -->
+    <div class="section5">
+      <div class="heading">
+        <img src="assets/images/Group 1000003298.png" alt="" />
+        <h2>Unique Selling Proposition (USP)</h2>
+        <div class="image287">
+          <img src="assets/images/Group 1000003287.png" alt="" />
+        </div>
+      </div>
+      <div class="table-container">
+        <table class="responsive-table">
+          <thead>
+            <tr>
+              <th style="color: #000000; font-size: 38px"><b>Features</b></th>
+              <th>TempurPaws Bed</th>
+              <th>Generic Pet Beds</th>
+              <th>Cooling/Heating Pads</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-size: 19px"><b>Pain Relief Duration</b></td>
+              <td>Long-lasting with adjustable temperature control</td>
+              <td>Temporary</td>
+              <td>Temporary</td>
+            </tr>
+            <tr>
+              <td style="font-size: 19px"><b>Pet Safety</b></td>
+              <td>Hospital-grade, designed for safe pet use</td>
+              <td>Varies</td>
+              <td>Varies, can be low quality</td>
+            </tr>
+            <tr>
+              <td style="font-size: 19px"><b>Ease of Use</b></td>
+              <td>Easy, no intervention needed</td>
+              <td>Easy to use</td>
+              <td>Requires setup and monitoring</td>
+            </tr>
+            <tr>
+              <td style="font-size: 19px"><b>Quality Materials</b></td>
+              <td>High-quality, durable, pet-safe materials</td>
+              <td>Standard materials</td>
+              <td>Mixed quality</td>
+            </tr>
+            <tr>
+              <td style="font-size: 19px"><b>Veterinarian Approval</b></td>
+              <td>Endorsed for therapeutic temperature control</td>
+              <td>Not typically recommended</td>
+              <td>Limited endorsement</td>
+            </tr>
+            <tr>
+              <td style="font-size: 19px"><b>Key Benefits</b></td>
+              <td>
+                Non-invasive, long-lasting relief for inflammation and arthritis
+              </td>
+              <td>Basic comfort</td>
+              <td>Cooling or heating relief</td>
+            </tr>
+            <tr>
+              <td style="font-size: 19px"><b>Pain Points Addressed</b></td>
+              <td>
+                Targets inflammation, arthritis, joint pain for natural mobility
+              </td>
+              <td>Minimal therapeutic benefit</td>
+              <td>Temporary temperature control</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <footer>
+        <div class="doFlex">
+          <div class="leftFooter">
+            <div class="footerImage">
+              <img src="assets/images/531cc_2.png.png" alt="" />
+            </div>
+            <div class="footerPara">
+              <h3>A Pet Subscription Service</h3>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and type
+                setting industry.
+              </p>
+            </div>
+          </div>
+          <div class="rightFooter">
+            <div class="about">
+              <h2>About</h2>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Faq's</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="others">
+              <h2>Others</h2>
+              <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Review</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">40 Days Money Back</a></li>
+              </ul>
+            </div>
+            <div class="contact">
+              <h2>Contact</h2>
+              <ul>
+                <li><a href="#">(919)606-7393</a></li>
+                <li><a href="#">help@tempurpaws.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="horizontalHeight">
+          <hr />
+        </div>
+        <div class="socialIcon">
+          <div class="fb">
+            <a href="#"><img src="assets/images/facebook.png" alt="" /></a>
+          </div>
+          <div class="arrow">
+            <a href="#"><img src="assets/images/up-arrow.png" alt="" /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+<style>
+.ff{
+  justify-content:space-between;
+  font-family: Montserrat;
+  font-weight: bold;
+  flex-basis: 30%;
+  font-size: 27px;
+  line-height: 33px;
+}
+</style>
+
+
+  
+  
